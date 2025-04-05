@@ -1,14 +1,15 @@
 import os
 import re
-import google.generativeai as genai
-from fastapi import FastAPI, File, UploadFile, Form
-from fastapi.middleware.cors import CORSMiddleware
-from dotenv import load_dotenv
+import shutil
+import tempfile
+import requests
 import pdfplumber
 import pytesseract
 from pdf2image import convert_from_path
-import shutil
-import tempfile
+from dotenv import load_dotenv
+from fastapi import FastAPI, File, UploadFile, Form
+from fastapi.middleware.cors import CORSMiddleware
+import google.generativeai as genai
 
 # Load environment variables
 load_dotenv()
@@ -19,20 +20,17 @@ genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 # Initialize FastAPI app
 app = FastAPI()
 
-# Allow frontend origin (adjust port if needed)
-origins = [
-    "http://localhost:5173",
-]
-
+# CORS setup
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["http://localhost:5173"],  # Allow frontend origin
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Function to extract text from PDFs
+# ---------- Resume Analysis Logic ----------
+
 def extract_text_from_pdf(pdf_path):
     text = ""
     try:
@@ -44,7 +42,6 @@ def extract_text_from_pdf(pdf_path):
     except Exception as e:
         print("PDFPlumber error:", e)
 
-    # If no text is found, use OCR
     if not text.strip():
         images = convert_from_path(pdf_path)
         for image in images:
@@ -52,18 +49,14 @@ def extract_text_from_pdf(pdf_path):
 
     return text.strip()
 
-
-# Function to clean Gemini output
 def clean_gemini_output(text):
-    text = re.sub(r"\*\*(.*?)\*\*", r"\1", text)         # Remove **bold**
-    text = re.sub(r"[*•📚⚠️💼✅🔹🔸📊🛠️📝⬇️🚀🔍]+", "", text)  # Remove emojis/symbols/bullets
-    text = re.sub(r"#+\s?", "", text)                    # Remove markdown headings
-    text = re.sub(r"[-–—]{1,3}\s?", "", text)            # Remove bullet dashes
-    text = re.sub(r"\n{2,}", "\n\n", text)               # Normalize extra newlines
+    text = re.sub(r"\*\*(.*?)\*\*", r"\1", text)
+    text = re.sub(r"[*•📚⚠️💼✅🔹🔸📊🛠️📝⬇️🚀🔍]+", "", text)
+    text = re.sub(r"#+\s?", "", text)
+    text = re.sub(r"[-–—]{1,3}\s?", "", text)
+    text = re.sub(r"\n{2,}", "\n\n", text)
     return text.strip()
 
-
-# Function to analyze resume using Gemini AI and return plain text
 def analyze_resume_text(resume_text, job_description=None):
     model = genai.GenerativeModel("gemini-1.5-flash")
 
@@ -89,35 +82,48 @@ Resume:
         prompt += f"\n\nCompare with this job description:\n{job_description}"
 
     response = model.generate_content(prompt)
-
-    # Clean the output before returning
     return clean_gemini_output(response.text)
 
-
-# API Endpoint for Resume Analysis
 @app.post("/analyze-resume/")
 async def analyze_resume_api(file: UploadFile = File(...), job_description: str = Form("")):
     temp_dir = tempfile.mkdtemp()
     file_path = os.path.join(temp_dir, file.filename)
 
-    # Save uploaded file to temporary location
     with open(file_path, "wb") as buffer:
         shutil.copyfileobj(file.file, buffer)
 
-    # Extract resume text
     resume_text = extract_text_from_pdf(file_path)
-
-    # Analyze resume
     analysis = analyze_resume_text(resume_text, job_description)
 
-    # Cleanup
     shutil.rmtree(temp_dir)
-
-    # Return cleaned plain text
     return {"analysis": analysis}
 
+# ---------- Job Recommendations Logic ----------
+# app = FastAPI()
+
+# app.add_middleware(
+#     CORSMiddleware,
+#     allow_origins=["http://localhost:5173"],
+#     allow_credentials=True,
+#     allow_methods=["*"],
+#     allow_headers=["*"],
+# )
+
+@app.get("/job-recommendations")
+def get_jobs():
+    url = "https://jsearch.p.rapidapi.com/search"
+    querystring = {"query": "developer in India", "page": "1", "num_pages": "2"}
+    headers = {
+        "X-RapidAPI-Key": os.getenv("RAPIDAPI_KEY"),
+        "X-RapidAPI-Host": "jsearch.p.rapidapi.com"
+    }
+
+    response = requests.get(url, headers=headers, params=querystring)
+    data = response.json()
+    return {"jobs": data.get("data", [])}
 
 # Optional: Run server directly
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000, reload=True)
+        
