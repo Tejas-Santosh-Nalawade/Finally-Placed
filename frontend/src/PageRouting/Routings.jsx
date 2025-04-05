@@ -15,14 +15,13 @@ function Routings() {
         <Router>
             <Routes>
             <Route path="/" element={<LandingPage />} />
-            <Route path="/app" element={<Layout />} />
             <Route path="/resume" element={<AnalyzeResume />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage/>} />
             <Route path="/app" element={<Layout />} >
                 <Route index element={<Dashboard />} />
-                <Route path="/resume" element={<AnalyzeResume />} />
-                <Route path="/job" element={<JobRecommendations />} />
+                <Route path="resume" element={<AnalyzeResume />} />
+                <Route path="job" element={<JobRecommendations />} />
             </Route>
             </Routes>
         </Router>

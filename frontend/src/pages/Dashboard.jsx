@@ -1,8 +1,6 @@
 import React from "react";
 
 export default function Dashboard() {
-   
-    const [date, setDate] = React.useState<Date | undefined>(new Date())
 
   return (
     <div className="min-h-screen bg-[#f9fafb] p-6 space-y-6">
