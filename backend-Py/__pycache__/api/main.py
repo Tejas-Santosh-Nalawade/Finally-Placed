@@ -26,7 +26,7 @@ origins = [
     "https://dev-clash-flax.vercel.app/",
 ]
 
->>>>>>> c99f7ef8ef41ed552741443d04e7ad28756c1b07:backend-Py/__pycache__/api/main.py
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:5173"],  # Allow frontend origin
