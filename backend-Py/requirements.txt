@@ -2,10 +2,9 @@ fastapi
 pdf2image==1.17.0
 pdfplumber==0.11.4
 pytesseract==0.3.13
-python-dotenv==1.0.1
 streamlit==1.32.0
 google.generativeai
-Flask==3.1.0
-requests==2.32.3
-flask-cors==5.0.1
-python-dotenv==1.1.0
+Flask
+requests
+flask-cors
+python-dotenv
