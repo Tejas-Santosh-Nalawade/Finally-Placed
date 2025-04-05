@@ -65,10 +65,14 @@ const Navbar = () => {
               </a>
             )
           )}
-          <button className="text-gray-300 hover:text-white transition duration-300">
+          <button onClick={() => {
+          navigate("/login");
+        }}className="text-gray-300 hover:text-white transition duration-300">
             Login
           </button>
-          <button className="bg-[#3a1c63] hover:bg-[#50228a] text-white py-2 px-4 rounded-lg shadow-lg transition duration-300">
+          <button onClick={() => {
+          navigate("/register");
+        }}className="bg-[#3a1c63] hover:bg-[#50228a] text-white py-2 px-4 rounded-lg shadow-lg transition duration-300">
             Start free trial
           </button>
         </div>
