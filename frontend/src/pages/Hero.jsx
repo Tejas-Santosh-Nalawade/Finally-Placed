@@ -34,12 +34,14 @@ const Hero = () => {
 
           {/* Main heading */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold text-white mb-6 max-w-5xl drop-shadow-lg glow-text">
-            Think better with Reflect
+            Get Placed with Finally Placed
+            <span className="text-purple-400">.</span>
+            <span className="text-purple-400 animate-pulse">.</span>
           </h1>
 
           {/* Subheading */}
           <p className="text-lg md:text-xl text-gray-300 max-w-2xl mb-12">
-            Never miss a note, idea, or connection.
+            Finally Placed is a one stop solution for all your placement needs.
           </p>
 
           {/* App preview */}
@@ -124,18 +126,17 @@ const Hero = () => {
                           <span className="mr-2 text-purple-400">•</span>
                           <div>
                             Today I started using{" "}
-                            <span className="text-purple-400">Reflect</span>!
+                            <span className="text-purple-400">Finally Placed</span>!
                           </div>
                         </li>
                         <li className="flex items-start">
                           <span className="mr-2 text-purple-400">•</span>
-                          <div>What is Reflect?</div>
+                          <div>What is Finally Placed</div>
                         </li>
                         <li className="flex items-start">
                           <span className="mr-2 text-purple-400">•</span>
                           <div>
-                            A note-taking tool designed to mirror the way we
-                            think
+                            <span className="text-purple-400">Finally Placed</span> is a one stop solution for all your placement needs.
                           </div>
                         </li>
                       </ul>

@@ -4,10 +4,10 @@ import Hero from './Hero'
 
 function LandingPage() {
   return (
-    <div>
-       <Navbar />
-       <Hero />
-    </div>
+    <>
+      <Navbar />
+      <Hero />
+    </>
   )
 }
 
