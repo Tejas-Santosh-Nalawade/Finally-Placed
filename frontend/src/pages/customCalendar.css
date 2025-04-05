@@ -1,0 +1,31 @@
+/* customCalendar.css */
+
+.crazy-calendar {
+    background-color: rgba(24, 24, 36, 0.7);
+    border-radius: 12px;
+    padding: 10px;
+    color: white;
+    border: 1px solid #2c2c3e;
+    box-shadow: 0 0 20px rgba(255, 0, 128, 0.2);
+  }
+  
+  .crazy-calendar .react-calendar__tile {
+    background: transparent;
+    border-radius: 8px;
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .crazy-calendar .react-calendar__tile--active {
+    background: linear-gradient(135deg, #ff4d88, #8e44ad);
+    color: white;
+    font-weight: bold;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #ff4d88;
+  }
+  
+  .crazy-calendar .react-calendar__tile:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+  }
+  
