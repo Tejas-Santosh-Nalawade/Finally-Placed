@@ -5,8 +5,8 @@ import AnalyzeResume from './pages/AnalyzeResume'
 function App() {
   return (
     <div>
-      <LandingPage />
-      {/* <AnalyzeResume/> */}
+      {/* <LandingPage /> */}
+      <AnalyzeResume/>
     </div>
   )
 }
