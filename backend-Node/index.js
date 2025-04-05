@@ -5,7 +5,7 @@ import cookieParser from "cookie-parser"
 import cors from "cors"
 dotenv.config()
 const PORT = process.env.PORT || 3000
-
+import axios from "axios"
 import connectDB from "./config/db.js"
 
 connectDB()
@@ -35,6 +35,32 @@ app.use(cookieParser())
 
 app.use("/api/users", userRoutes)
 
+app.get("/job-recommendations", async (req, res) => {
+  const url = "https://jsearch.p.rapidapi.com/search";
+  const queryParams = {
+    query: "developer in India",
+    page: "1",
+    num_pages: "2",
+  };
+
+  const headers = {
+    "X-RapidAPI-Key": process.env.RAPIDAPI_KEY,
+    "X-RapidAPI-Host": "jsearch.p.rapidapi.com",
+  };
+
+  try {
+    const response = await axios.get(url, {
+      headers,
+      params: queryParams,
+    });
+
+    const jobs = response.data.data || [];
+    res.json({ jobs });
+  } catch (error) {
+    console.error("Error fetching jobs:", error.message);
+    res.status(500).json({ error: "Failed to fetch job recommendations" });
+  }
+});
 
 app.listen(PORT, () => {
   console.log("Server listening on port: " + PORT)
