@@ -21,8 +21,8 @@ function Routings() {
             <Route path="/register" element={<RegisterPage/>} />
             <Route path="/app" element={<Layout />} >
                 <Route index element={<Dashboard />} />
-                <Route path="resume" element={<AnalyzeResume />} />
-                <Route path="job" element={<JobRecommendations />} />
+                <Route path="/resume" element={<AnalyzeResume />} />
+                <Route path="/job" element={<JobRecommendations />} />
             </Route>
             </Routes>
         </Router>
