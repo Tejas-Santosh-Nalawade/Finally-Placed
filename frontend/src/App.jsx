@@ -4,7 +4,9 @@ function App() {
   return (
     <div>
 
-     <JobRecommendations />
+      <LandingPage />
+      {/* <AnalyzeResume/> */}
+     {/* <JobRecommendations /> */}
     </div>
   )
 }
