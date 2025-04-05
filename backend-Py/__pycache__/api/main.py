@@ -21,7 +21,7 @@ app = FastAPI()
 
 # Allow frontend origin (adjust port if needed)
 origins = [
-    "http://localhost:5173",
+    "https://dev-clash-flax.vercel.app/",
 ]
 
 app.add_middleware(
