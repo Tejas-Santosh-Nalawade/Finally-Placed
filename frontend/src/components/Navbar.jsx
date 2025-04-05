@@ -10,8 +10,8 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 w-full backdrop-blur-md bg-transparent text-white py-4 px-6 md:px-8 flex items-center justify-between z-50">
       {/* Logo */}
       <div className="text-lg font-semibold flex items-center space-x-2">
-        <img src="/logo.png" alt="Reflect Logo" className="w-6 h-6" />
-        <span>Reflect</span>
+        {/* <img src="/logo.png" alt="Reflect Logo" className="w-6 h-6" /> */}
+        <span>Finally Placed</span>
       </div>
 
       {/* Desktop Navigation */}

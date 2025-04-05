@@ -92,8 +92,8 @@ export function RegisterForm(props) {
                   placeholder="Enter your password"
                 />
               </div>
-              <Button type="submit" className="w-full">
-                Login
+              <Button type="submit" className="w-full bg-white text-black border border-gray-300 hover:bg-gray-100">
+                SignIn
               </Button>
               {/* <Button variant="outline" className="w-full">
                 Login with Google
@@ -107,6 +107,7 @@ export function RegisterForm(props) {
             </div>
           </form>
         </CardContent>
+
       </Card>
     </div>
   );
