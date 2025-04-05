@@ -1,16 +1,15 @@
 
 import React from 'react'
 import Routings from './PageRouting/Routings'
-import LandingPage from './LandingPage'
-import AnalyzeResume from './AnalyzeResume' 
-import JobRecommendations from './JobRecommendations'
+import AnalyzeResume from './pages/AnalyzeResume' 
+import JobRecommendations from './pages/JobRecommendations'
+import LandingPage from './pages/LandingPage'
 
 function App() {
   return (
     <div>
-
-
-      <LandingPage />
+      {/* <LandingPage  /> */}
+      <Routings />
       {/* <AnalyzeResume/> */}
      {/* <JobRecommendations /> */}
 
