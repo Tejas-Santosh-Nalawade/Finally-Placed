@@ -20,14 +20,15 @@ genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 # Initialize FastAPI app
 app = FastAPI()
 
-# CORS setup
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # Allow frontend origin
+    allow_origins=["*"],  # Allow all origins
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["*"],  # Allow all HTTP methods
+    allow_headers=["*"],  # Allow all headers
 )
+
 
 # ---------- Resume Analysis Logic ----------
 
@@ -124,6 +125,5 @@ def get_jobs():
 
 # Optional: Run server directly
 if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000, reload=True)
+    app.run(debug=True)
         
