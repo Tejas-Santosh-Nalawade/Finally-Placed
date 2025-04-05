@@ -15,37 +15,40 @@ import { Input } from "@/components/ui/input";
 
 import { Label } from "@/components/ui/label";
 
-export function LoginForm(props) {
+export function RegisterForm(props) {
 
   const navigate = useNavigate()
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
 
 
   
   const { className, ...rest } = props;
 
   const handleSubmit = async (e) => {
-      e.preventDefault()
-      try {
-        await axios.post("https://dev-backend-nine.vercel.app/api/users/auth", {
+    e.preventDefault()
+    try {
+      await axios
+        .post("https://dev-backend-nine.vercel.app/api/users/", {
+          name,
           email,
           password,
         })
         .then(() => {
           navigate('/app')
-          console.log('User logged in')
+          console.log("User created")
         })
-      } catch (error) {
-        console.log(error)
-      }
+    } catch (error) {
+      console.log(error)
     }
+  }
 
   return (
     <div className={cn("flex flex-col gap-6", className)} {...rest}>
       <Card>
         <CardHeader>
-          <CardTitle className="text-2xl">Login</CardTitle>
+          <CardTitle className="text-2xl">SignIn</CardTitle>
           <CardDescription>
             Enter your email below to login to your account
           </CardDescription>
@@ -55,6 +58,16 @@ export function LoginForm(props) {
             onSubmit={handleSubmit}
           > 
             <div className="flex flex-col gap-6">
+            <div className="grid gap-2">
+                <Label htmlFor="name">Name</Label>
+                <Input
+                  onChange={(e) => setName(e.target.value)}
+                  id="name"
+                  type="text"
+                  placeholder="Enter your name"
+                  required
+                />
+              </div>
               <div className="grid gap-2">
                 <Label htmlFor="email">Email</Label>
                 <Input
@@ -76,6 +89,7 @@ export function LoginForm(props) {
                   </a>
                 </div>
                 <Input id="password" type="password" required  onChange={(e) => setPassword(e.target.value) }
+                  placeholder="Enter your password"
                 />
               </div>
               <Button type="submit" className="w-full">
