@@ -9,6 +9,7 @@ function LandingPage() {
       <Navbar />
       <Hero />
       <FeaturesGrid />
+      <FeaturesGrid />
     </>
   )
 }
