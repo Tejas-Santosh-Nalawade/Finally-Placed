@@ -18,4 +18,8 @@ router
   .get(protect, getUserProfile)
   .put(protect, updateUserProfile)
 
+router.get("/get" ,(req,res) =>{
+  res.send("backend working")
+})
+
 export default router
