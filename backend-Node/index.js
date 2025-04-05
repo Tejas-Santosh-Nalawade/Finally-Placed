@@ -19,12 +19,14 @@ const app = express()
 // app.use(cors({ origin: "http://localhost:5173"}, )) // for Localhost
 
 
-app.use(cors({
-  origin: "https://dev-clash-flax.vercel.app/",
-  credentials: true, // Allow cookies or Authorization headers
-  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // Ensure all required methods are allowed
-  allowedHeaders: ["Content-Type", "Authorization"] // Include necessary headers
-}))
+// app.use(cors({
+//   origin: "https://dev-clash-flax.vercel.app/",
+//   credentials: true, // Allow cookies or Authorization headers
+//   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // Ensure all required methods are allowed
+//   allowedHeaders: ["Content-Type", "Authorization"] // Include necessary headers
+// }))
+
+app.use(cors());
 
 
 app.use(express.json())
