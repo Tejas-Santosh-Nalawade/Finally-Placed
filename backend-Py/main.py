@@ -20,13 +20,7 @@ genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 # Initialize FastAPI app
 app = FastAPI()
 
-
-# Allow frontend origin (adjust port if needed)
-origins = [
-    "https://dev-clash-flax.vercel.app/",
-]
-
-
+# CORS setup
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:5173"],  # Allow frontend origin

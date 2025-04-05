@@ -6,3 +6,7 @@ pytesseract==0.3.13
 python-dotenv==1.0.1
 streamlit==1.32.0
 google.generativeai
+Flask
+requests
+flask-cors
+python-dotenv
