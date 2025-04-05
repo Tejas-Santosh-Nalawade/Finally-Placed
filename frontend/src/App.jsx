@@ -1,10 +1,12 @@
 import React from 'react'
 import LandingPage from './pages/LandingPage'
+import AnalyzeResume from './pages/AnalyzeResume'
 
 function App() {
   return (
     <div>
-      <LandingPage />
+      {/* <LandingPage /> */}
+      <AnalyzeResume/>
     </div>
   )
 }
