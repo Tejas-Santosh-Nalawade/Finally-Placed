@@ -9,7 +9,7 @@ const JobRecommendations = () => {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const res = await axios.get("https://dev-backend-nine.vercel.app/api/job-recommendations");
+        const res = await axios.get("https://dev-backend-nine.vercel.app/job-recommendations");
         setJobs(res.data.jobs);
         setLoading(false);
       } catch (err) {
