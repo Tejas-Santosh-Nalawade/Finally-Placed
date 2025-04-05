@@ -107,6 +107,7 @@ export function RegisterForm(props) {
             </div>
           </form>
         </CardContent>
+
       </Card>
     </div>
   );
