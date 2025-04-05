@@ -4,7 +4,7 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Responsi
 import { FaFileAlt, FaChartLine } from "react-icons/fa";
 
 const resumeData = {
-  name: "John Doe",
+  name: "John",
   role: "Frontend Developer",
   atsScore: 86, // out of 100
   insights: [
