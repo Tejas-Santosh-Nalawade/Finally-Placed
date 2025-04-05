@@ -1,12 +1,10 @@
 import React from 'react'
-import LandingPage from './pages/LandingPage'
-import AnalyzeResume from './pages/AnalyzeResume'
+import Routings from './PageRouting/Routings'
 
 function App() {
   return (
     <div>
-      <LandingPage />
-      {/* <AnalyzeResume/> */}
+      <Routings />
     </div>
   )
 }
