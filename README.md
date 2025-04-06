@@ -83,4 +83,6 @@ A sleek and personalized career development dashboard built with *React*. Design
 1. Clone the repository:
    ```bash
    git clone https://github.com/Tejas-Santosh-Nalawade/Dev-Clash.git
-   cd job-dashboard
+   cd Dev-Clash
+   npm install
+   npm run dev
