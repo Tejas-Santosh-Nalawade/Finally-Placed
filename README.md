@@ -47,7 +47,7 @@ A sleek and personalized career development dashboard built with *React*. Design
 
 | Learning Path | Aptitude Test | Contests |
 |---------------|---------------------|---------------|
-| ![Learning](./screenshots/learning.png) | ![Aptitude Test](./screenshots/apti.png) | ![Aptitude](./screenshots/aptitude.png) |
+| ![Learning](./screenshots/learning.png) | ![Aptitude Test](./screenshots/apti.png) | ![Contests](./screenshots/contests.png) |
 
 ## 🛠️ Tech Stack
 
