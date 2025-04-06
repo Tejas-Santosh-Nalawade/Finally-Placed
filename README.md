@@ -1,82 +1,86 @@
-# 💼 AI Powered Placement Assistant
+# 💼 Finally Placed - AI Powered Placement Assistant
 
-A sleek and personalized developer dashboard built with *React*. Designed to supercharge your job prep journey, this dashboard offers a unified place to manage your resume, track DSA progress, access curated learning resources, and even get AI-powered interview feedback!
+![Project Banner](./screenshots/banner.png) *Replace with actual banner image*
 
----
+A sleek and personalized career development dashboard built with *React*. Designed to supercharge your job preparation journey, this platform offers a unified interface to manage your resume, track DSA progress, access curated learning resources, and get AI-powered interview feedback.
 
-## ✨ Features
+## ✨ Key Features
 
-- ✅ *Daily Checklist* to stay consistent with your career goals
-- 📄 *Resume Analyzer* that scores and recommends improvements
-- 💼 *Job Recommendations* from top tech companies
-- 🧠 *Personalized Learning Path* based on your interests
-- 📊 *DSA Progress Tracker* to monitor your preparation journey
-- 🤖 *AI-Powered Mock Interview* module with smart suggestions and feedback
+### 📊 Dashboard
+- Personalized progress tracking
+- Daily goals and achievement metrics
+- Quick access to all platform features
 
----
+### 📄 Resume Analyzer
+- Instant ATS compatibility scoring
+- Skill gap analysis
+- AI-powered improvement suggestions
 
-## 🤖 AI Mock Interview & Smart Suggestions
+### 🤖 AI Interview Assistant
+- Real-time speech analysis (pace, clarity)
+- Eye contact and posture tracking
+- Detailed performance reports
+- Personalized improvement tips
 
-Prepare for real-world interviews using our *AI Mock Interview* module:
+### 🧠 Learning Hub
+- Structured DSA learning paths
+- Progress tracking (lectures/assignments)
+- Personalized course recommendations
 
-### What It Does:
-- Simulates real interview questions based on your chosen role (e.g., Frontend, Backend, Full Stack)
-- Analyzes your answers (text-based)
-- Gives *detailed suggestions* on:
-  - Clarity and structure
-  - Communication skills
-  - Technical accuracy
-  - Confidence level
-  - Posture and eye contact 
+### 💼 Career Tools
+- Smart job matching algorithm
+- Application tracking
+- Company-specific preparation resources
 
-### Sample Suggestions:
-> "Try to explain the time complexity of your solution more clearly. Use examples to make your approach relatable."
+### 🧪 Aptitude Training
+- Numerical reasoning tests
+- Logical reasoning exercises
+- Verbal ability assessments
 
-> "Your introduction was strong. Consider mentioning a recent project to sound more confident."
+## 🖥️ Screenshots
+| Home | Features | Resume Page |
+|-----------|-----------------|----------------|
+| ![Home](./screenshots/home.png) | ![Features](./screenshots/features.png) | ![Mock Interview](./screenshots/resume_page.png) |
+| Dashboard | Resume Analysis | Mock Interview |
+|-----------|-----------------|----------------|
+| ![Dashboard](./screenshots/dashboard.png) | ![Resume Analysis](./screenshots/resume.png) | ![Mock Interview](./screenshots/interview.png) |
 
----
+| Learning Path | Aptitude Test | Contests |
+|---------------|---------------------|---------------|
+| ![Learning](./screenshots/learning.png) | ![Aptitude Test](./screenshots/apti.png) | ![Aptitude](./screenshots/aptitude.png) |
 
-## 🛠 Tech Stack
+## 🛠️ Tech Stack
 
-- *React* – Frontend library
-- *Tailwind CSS* – For stylish UI components
-- *React Hooks* – For state management
-- *MongoDB* – For storing user data, progress, and interview feedback
-- *OpenAI API* – For analyzing mock interview responses and generating feedback
-- *OpenCV* – For facial expression tracking during video-based interviews
-- *TensorFlow* – For analyzing voice tone, sentiment, and facial emotion
-- *MediaPipe* – For detecting gestures, face landmarks, and real-time motion tracking
----
+### Frontend
+- **React** - Core framework
+- **Tailwind CSS** - Styling and UI components
+- **React Hooks** - State management
+- **Chart.js** - Data visualization
 
-## 🛠 API
+### Backend
+- **Node.js** - Server environment
+- **Express** - API framework
+- **MongoDB** - Database
 
-- *Rapid Api* - Job Search
-- *Gemeini Api* - Resume Analysis
+### AI/ML Components
+- **OpenAI API** - Response analysis
+- **TensorFlow** - Voice and sentiment analysis
+- **OpenCV** - Facial expression tracking
+- **MediaPipe** - Gesture detection
 
----
+### APIs
+- **RapidAPI** - Job search integration
+- **Gemini API** - Resume analysis
 
 ## 🚀 Getting Started
 
-### 1. Clone the Repository
+### Prerequisites
+- Node.js (v16+)
+- npm (v8+)
+- MongoDB Atlas account
 
-```bash
-git clone https://github.com/Tejas-Santosh-Nalawade/Dev-Clash.git
-cd job-dashboard
-
-npm install
-
-npm run dev
-# or
-npm start
-
-
-
-
-
-
-
-
-## 🔗 Links
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://katherineoelsner.com/)
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/)
-[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/)
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Tejas-Santosh-Nalawade/Dev-Clash.git
+   cd job-dashboard
