@@ -1,8 +1,6 @@
 # 💼 Finally Placed - AI Powered Placement Assistant
 
-![Project Banner](./screenshots/banner.png) *Replace with actual banner image*
-
-A sleek and personalized career development dashboard built with *React*. Designed to supercharge your job preparation journey, this platform offers a unified interface to manage your resume, track DSA progress, access curated learning resources, and get AI-powered interview feedback.
+One stop solution for Placement Preparation with amazing landing page and dashboard with contain multiple functionalities built with *React*. Designed to supercharge your job preparation journey, this platform offers a unified interface to manage your resume, track DSA progress, access curated learning resources, and get AI-powered interview feedback.
 
 ## ✨ Key Features
 
