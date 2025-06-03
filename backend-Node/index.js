@@ -26,13 +26,13 @@ const app = express()
 //   allowedHeaders: ["Content-Type", "Authorization"] // Include necessary headers
 // }))
 
-// app.use(cors());
-app.use(cors({
-  origin: "https://dev-clash-hackathon.vercel.app", // frontend domain
-  credentials: true,
-  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"]
-}));
+app.use(cors());
+// app.use(cors({
+//   origin: "https://dev-clash-hackathon.vercel.app", // frontend domain
+//   credentials: true,
+//   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+//   allowedHeaders: ["Content-Type", "Authorization"]
+// }));
 
 app.use(express.json())
 
