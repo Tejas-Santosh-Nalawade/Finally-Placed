@@ -29,26 +29,13 @@ A sleek and personalized career development dashboard built with *React*. Design
 
 ## 🛠️ Tech Stack
 
-### Frontend
-- **React** - Core framework
-- **Tailwind CSS** - Styling and UI components
-- **React Hooks** - State management
-- **Chart.js** - Data visualization
+| Category | Technologies |
+|----------|-------------|
+| **Frontend** | React • Tailwind CSS • React Hooks • Chart.js |
+| **Backend** | Node.js • Express • MongoDB |
+| **AI/ML Components** | OpenAI API • TensorFlow • OpenCV • MediaPipe |
+| **APIs** | RapidAPI • Gemini API |
 
-### Backend
-- **Node.js** - Server environment
-- **Express** - API framework
-- **MongoDB** - Database
-
-### AI/ML Components
-- **OpenAI API** - Response analysis
-- **TensorFlow** - Voice and sentiment analysis
-- **OpenCV** - Facial expression tracking
-- **MediaPipe** - Gesture detection
-
-### APIs
-- **RapidAPI** - Job search integration
-- **Gemini API** - Resume analysis
 
 ## 🚀 Getting Started
 
