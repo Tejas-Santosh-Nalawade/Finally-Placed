@@ -6,36 +6,14 @@ A sleek and personalized career development dashboard built with *React*. Design
 
 ## ✨ Key Features
 
-### 📊 Dashboard
-- Personalized progress tracking
-- Daily goals and achievement metrics
-- Quick access to all platform features
-
-### 📄 Resume Analyzer
-- Instant ATS compatibility scoring
-- Skill gap analysis
-- AI-powered improvement suggestions
-
-### 🤖 AI Interview Assistant
-- Real-time speech analysis (pace, clarity)
-- Eye contact and posture tracking
-- Detailed performance reports
-- Personalized improvement tips
-
-### 🧠 Learning Hub
-- Structured DSA learning paths
-- Progress tracking (lectures/assignments)
-- Personalized course recommendations
-
-### 💼 Career Tools
-- Smart job matching algorithm
-- Application tracking
-- Company-specific preparation resources
-
-### 🧪 Aptitude Training
-- Numerical reasoning tests
-- Logical reasoning exercises
-- Verbal ability assessments
+| Feature | Description |
+|---------|-------------|
+| 📊 **Dashboard** | Personalized progress tracking • Daily goals and achievement metrics • Quick access to all platform features |
+| 📄 **Resume Analyzer** | Instant ATS compatibility scoring • Skill gap analysis • AI-powered improvement suggestions |
+| 🤖 **AI Interview Assistant** | Real-time speech analysis (pace, clarity) • Eye contact and posture tracking • Detailed performance reports • Personalized improvement tips |
+| 🧠 **Learning Hub** | Structured DSA learning paths • Progress tracking (lectures/assignments) • Personalized course recommendations |
+| 💼 **Career Tools** | Smart job matching algorithm • Application tracking • Company-specific preparation resources |
+| 🧪 **Aptitude Training** | Numerical reasoning tests • Logical reasoning exercises • Verbal ability assessments |
 
 ## 🖥️ Screenshots
 | Home | Features | Resume Page |
@@ -190,11 +168,6 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
----
-
-## 📄 **License**
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
