@@ -19,8 +19,7 @@ A sleek and personalized career development dashboard built with *React*. Design
 | Home | Features | Resume Page |
 |-----------|-----------------|----------------|
 | ![Home](./screenshots/home.png) | ![Features](./screenshots/features.png) | ![Mock Interview](./screenshots/resume_page.png) |
-| Dashboard | Resume Analysis | Mock Interview |
-|-----------|-----------------|----------------|
+| **Dashboard** | **Resume Analysis** | **Mock Interview** |
 | ![Dashboard](./screenshots/dashboard.png) | ![Resume Analysis](./screenshots/resume.png) | ![Mock Interview](./screenshots/interview.png) |
 
 | Learning Path | Aptitude Test | Contests |
